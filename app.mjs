@@ -14,14 +14,19 @@ const messages = [
         user: "Charles",
         added: new Date(),
     }
-]
+];
+
 
 
 app.set("views", path.join(path.dirname(""), "views"));
 app.set("view engine", "ejs");
 
-app.get("/");
-app.get("/new");
+app.get("/", (req, res)=> {
+    res.render("index");
+});
+app.get("/new", (req, res)=>{
+    res.render("new");
+});
 
 
 
