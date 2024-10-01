@@ -1,5 +1,20 @@
 <html>
     <body>
-        This is the index!!!
+        <h1><%=title%></h1>
+        <ul>
+        <% for(let i=0;i<messages.length;i++) { %>
+        <li>
+            <span><%= messages[i].user %></span>
+            <a href="/detail/<%=i%>">details</a>
+        </li>
+        <% } %>
+        <% for(let i=0;i<links.length;i++){%>
+            <li>
+                <a href="<%=links[i].link%>">
+                    <%=links[i].text%>
+                </a>
+            </li>
+        <% } %>
+        </ul>
     </body>
 </html>
